@@ -1,0 +1,15 @@
+# Archivos CSS generados automáticamente
+css/style.css
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+*.log
+
+# VS Code config (opcional)
+.vscode/
+
+# Mapas de SASS
+*.map

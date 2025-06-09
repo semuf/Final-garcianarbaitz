@@ -1,0 +1,131 @@
+.proyectos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 16px;
+
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.4s ease, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  .galeria-slider {
+  padding: 40px;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .glider-prev,
+  .glider-next {
+    background-color: $color-principal;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: $color-acento;
+    }
+  }
+
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+
+    button {
+      background-color: $color-secundario;
+      border: none;
+      width: 10px;
+      height: 10px;
+      margin: 4px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.glider-dot-active {
+        background-color: $color-acento;
+      }
+    }
+  }
+}
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      background: $color-acento;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+  .modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  animation: modalFadeIn 0.4s ease;
+}
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

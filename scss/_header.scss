@@ -1,0 +1,23 @@
+header {
+  background-color: $color-fondo;
+  padding: $espaciado-base;
+
+  nav ul {
+    display: flex;
+    gap: $espaciado-base;
+    list-style: none;
+    justify-content: center;
+    transition: color 0.3s ease;
+
+    li a {
+      text-decoration: none;
+      color: $color-principal;
+      font-weight: bold;
+
+      &:hover {
+        color: $color-acento;
+        transition: color 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.nosotros {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 16px;
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: $color-secundario;
+    margin-bottom: 40px;
+  }
+
+  .equipo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+
+    .persona {
+      width: 250px;
+      text-align: center;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        margin-bottom: 4px;
+      }
+
+      span {
+        font-size: 0.9rem;
+        color: $color-secundario;
+      }
+    }
+  }
+}
