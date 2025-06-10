@@ -16,3 +16,18 @@ main {
     }
   }
 }
+.hero {
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: grayscale(100%);
+    border-radius: 8px;
+  }
+}

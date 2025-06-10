@@ -68,6 +68,21 @@ main section p {
   color: #555;
 }
 
+.hero {
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -192,8 +207,15 @@ main section p {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-.proyectos .galeria-slider {
-  padding: 40px;
+.proyectos .galeria-slider .glider img {
+  width: 100%;
+  border-radius: 8px;
+  transition: filter 0.5s ease, transform 0.3s ease;
+  filter: grayscale(100%);
+}
+.proyectos .galeria-slider .glider img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
 }
 .proyectos .galeria-slider img {
   width: 100%;
