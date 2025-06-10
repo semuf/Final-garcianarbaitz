@@ -11,6 +11,18 @@ body {
   line-height: 1.6;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 header {
   background-color: #fff;
   padding: 16px;
@@ -277,39 +289,48 @@ main section p {
   }
 }
 .contacto {
-  max-width: 800px;
-  margin: 0 auto;
+  flex: 1;
   padding: 80px 16px;
-}
-.contacto h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-}
-.contacto form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: center;
 }
-.contacto form input,
-.contacto form textarea {
-  padding: 12px;
+.contacto h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contacto .formulario {
+  width: 100%;
+  max-width: 700px;
+}
+.contacto .formulario form {
+  background-color: #f8f8f8;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contacto .formulario form input,
+.contacto .formulario form textarea {
+  padding: 14px;
+  font-size: 1rem;
   border: 1px solid #555;
   border-radius: 6px;
-  font-size: 1rem;
   font-family: "Helvetica Neue", sans-serif;
 }
-.contacto form button {
-  padding: 12px;
+.contacto .formulario form button {
+  padding: 14px;
   background-color: #111;
-  color: #fff;
+  color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.contacto form button:hover {
+.contacto .formulario form button:hover {
   background-color: #c99f55;
   transform: scale(1.05);
 }

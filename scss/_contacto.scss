@@ -1,43 +1,51 @@
 .contacto {
-  max-width: 800px;
-  margin: 0 auto;
+  flex: 1;
   padding: 80px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
-    text-align: center;
     font-size: 2.2rem;
     margin-bottom: 30px;
+    text-align: center;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  .formulario {
+    width: 100%;
+    max-width: 700px;
 
-    input,
-    textarea {
-      padding: 12px;
-      border: 1px solid $color-secundario;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-family: $fuente-principal;
-    }
+    form {
+      background-color: #f8f8f8;
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-    button {
-      padding: 12px;
-      background-color: $color-principal;
-      color: $color-fondo;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      input,
+      textarea {
+        padding: 14px;
+        font-size: 1rem;
+        border: 1px solid $color-secundario;
+        border-radius: 6px;
+        font-family: $fuente-principal;
+      }
 
-      
-  &:hover {
-    background-color: $color-acento;
+      button {
+        padding: 14px;
+        background-color: $color-principal;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+
+    &:hover {
+      background-color: $color-acento;
     transform: scale(1.05);
-        
+        }
       }
     }
   }
