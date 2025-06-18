@@ -140,3 +140,31 @@
     transform: scale(1);
   }
 }
+@media screen and (max-width: 480px) {
+  .galeria-slider {
+    padding: 24px 12px;
+
+    .glider img {
+      border-radius: 6px;
+      transform: none;
+    }
+
+    .glider-prev,
+    .glider-next {
+      padding: 6px 10px;
+      font-size: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .proyectos {
+    .galeria-slider {
+      grid-template-columns: 1fr;
+      gap: 16px;
+
+      img {
+        border-radius: 6px;
+      }
+    }
+  }
+}

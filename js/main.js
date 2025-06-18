@@ -1,57 +1,42 @@
 document.addEventListener('DOMContentLoaded', function () {
-  new Glider(document.querySelector('.glider'), {
-    slidesToShow: 1,
-    dots: '.dots',
-    arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
-    },
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3
-        }
-      }
-    ]
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  // Glider
-  new Glider(document.querySelector(".glider"), {
-    slidesToShow: 1,
-    dots: ".dots",
-    arrows: {
-      prev: ".glider-prev",
-      next: ".glider-next",
-    },
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-    ],
-  });
-
-  // Lightbox personalizado
-  const images = document.querySelectorAll(".glider img");
+  const gliderElement = document.querySelector('.glider');
   const modal = document.getElementById("modal-img");
   const modalImage = document.getElementById("modal-image");
   const closeModal = document.querySelector(".modal-close");
+
+  // Si el ancho es >= 768, inicializamos Glider
+  if (window.innerWidth >= 768 && gliderElement) {
+    new Glider(gliderElement, {
+      slidesToShow: 1,
+      dots: '.dots',
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+      },
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
+    });
+  } else {
+    // Si es mobile: eliminamos la clase .glider
+    if (gliderElement) {
+      gliderElement.classList.remove('glider');
+    }
+  }
+
+  // Lightbox (funciona igual para mobile o desktop)
+  const images = document.querySelectorAll(".galeria-slider img");
 
   images.forEach((img) => {
     img.addEventListener("click", () => {
@@ -70,4 +55,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
